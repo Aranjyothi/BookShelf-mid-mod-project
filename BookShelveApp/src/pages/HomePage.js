@@ -2,7 +2,7 @@ import React, { useEffect } from "react"
 import{useState} from'react'
 import DisplayBooks from "../components/DisplayBooks"
 
-function HomePage (){
+function HomePage ({addToFavorites}){
     const[bookList,setBookList] =useState([])
     console.log(bookList)
     
@@ -31,8 +31,8 @@ function HomePage (){
         
     },[])
     return(
-        <div>
-            <DisplayBooks data={bookList}/>
+        <div className="home">
+            <DisplayBooks data={bookList} addToFavorites={addToFavorites}/>
         </div>
     )
 }

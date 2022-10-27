@@ -5,8 +5,9 @@ function Navbar() {
         <ul>
             <li>
                 <Link to="/">HomePage</Link>
-                <Link to="/favoritebooks">FavoriteBook</Link>
-                <Link className='navtxt' to='/About'><div >About</div></Link>
+                </li>
+                <li> <Link to="/favorites">Favorites</Link></li>
+                <li><Link className='navtxt' to='/About'><div >About</div></Link>
 
             </li>
         </ul>
