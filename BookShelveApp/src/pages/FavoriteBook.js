@@ -9,8 +9,10 @@ function FavoriteBook({favorite,removeFromFavorites}) {
       {favorite.map((item)=>{
         return(
         <div key={item.id}>
-          {item.title}
-          <img src={item.imgUrl} alt={item.title}></img>
+          removeFromFavorites={removeFromFavorites}
+          {item.title} <br />
+          <img src={item.imgUrl} alt={item.title}></img><br></br>
+          Review:{item.review} <br /> Description:{item.description}
 
         </div>
         )
