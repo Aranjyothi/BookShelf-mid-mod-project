@@ -14,14 +14,23 @@ function App() {
   setFavorite([...favorite,item])
   console.log(item)
  }
+ function removeFromFavorites(item){
+  setFavorite(favorite.filter((f)=>{
+   if (item.id !== f.id){
+return true
+   }else{
+return false
+   }
+  }))
+ }
 
   return (
     
     <div className="App">
             <Navbar/>
      <Routes>
-    <Route path="/" element={<HomePage addToFavorites={addToFavorites}/>}/>
-    <Route path='/favorites' element={<FavoriteBook favorite={favorite}/>}/>
+    <Route path="/" element={<HomePage favorite={favorite}addToFavorites={addToFavorites}/>}/>
+    <Route path='/favorites' element={<FavoriteBook favorite={favorite} removeFromFavorites={removeFromFavorites}/>}/>
     <Route path='/about' element={<About/>}/>
      </Routes>
  

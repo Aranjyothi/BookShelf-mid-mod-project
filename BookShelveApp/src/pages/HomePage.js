@@ -2,7 +2,7 @@ import React, { useEffect } from "react"
 import{useState} from'react'
 import DisplayBooks from "../components/DisplayBooks"
 
-function HomePage ({addToFavorites,favorites}){
+function HomePage ({addToFavorites,favorite}){
     const[bookList,setBookList] =useState([])
     console.log(bookList)
     
@@ -32,7 +32,7 @@ function HomePage ({addToFavorites,favorites}){
     },[])
     return(
         <div className="home">
-            <DisplayBooks data={bookList} addToFavorites={addToFavorites}favorites={favorites} />
+            <DisplayBooks data={bookList} addToFavorites={addToFavorites}favorite={favorite} />
         </div>
     )
 }
