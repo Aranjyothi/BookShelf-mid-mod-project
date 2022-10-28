@@ -44,11 +44,12 @@ function FavoriteBook({item,favorite,addToFavorites,removeFromFavorites}) {
           Title: {item.title} <br />
           <img src={item.imgUrl} alt={item.title}></img><br></br>
           Review:{item.review} <br /> 
-          Description:{item.description}
+          Description:{item.description} 
           {/* removeFromFavorites={removeFromFavorites} */}
           <br></br>
           {/* <button onClick={() => removeFromFavorites(item)}>Remove from Favorite</button><br /><br /> */}
          {loaded(item) }
+         <br />
         </div>
         )
       })}
