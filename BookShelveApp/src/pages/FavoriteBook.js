@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 // import Button from '../components/Button'
 // import {useLocation} from "react-router-dom"
@@ -42,7 +43,10 @@ function FavoriteBook({item,favorite,addToFavorites,removeFromFavorites}) {
         <div key={item.id}>
           
           Title: {item.title} <br />
-          <img src={item.imgUrl} alt={item.title}></img><br></br>
+          <Link to={`/favorites/${item.id}`}>
+          <img src={item.imgUrl} alt={item.title}></img>
+          </Link>
+          <br></br>
           Review:{item.review} <br /> 
           Description:{item.description} 
           {/* removeFromFavorites={removeFromFavorites} */}

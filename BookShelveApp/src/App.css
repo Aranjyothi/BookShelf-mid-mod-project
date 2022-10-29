@@ -1,7 +1,6 @@
-.app {
+app {
     display: grid;
 }
-
 body {
     background-image: url('./components/image/bookshelve.jpg');
     background-repeat: no-repeat;
@@ -13,20 +12,17 @@ body {
     background-position: center center;
     overflow: -moz-hidden-unscrollable;
     display: flex;
-    /* position: fixed; */
-
+   
 }
 img {
     width: 100%;
     height: 100%;
 }
-
 .container {
     display:flex;
     background-size: cover;
     background-position: center center;
     overflow: -moz-hidden-unscrollable;
-
     width: 100px;
     height: 100px;
     padding: 15px;
@@ -41,12 +37,11 @@ img {
 }
 
 
-
 .ul {
     /* list-style-type: none; */
     margin: 0;
     padding: 0;
 }
-p{
+ p{
     color: red;
-}
+} 

@@ -52,7 +52,7 @@ return false
      <Routes>
     <Route path="/" element={<HomePage favorite={favorite}addToFavorites={addToFavorites}/>}/>
     <Route path='/favorites' element={<FavoriteBook favorite={favorite} removeFromFavorites={removeFromFavorites}/>}/>
-    <Route path='/favorite/:id' element={<BookDetails favorite={favorite} addMoreToFavorites={addMoreToFavorites} />}/>
+    <Route path='/favorites/:id' element={<BookDetails favorite={favorite} addMoreToFavorites={addMoreToFavorites} />}/>
     <Route path='/about' element={<About/>}/>
      </Routes>
  
