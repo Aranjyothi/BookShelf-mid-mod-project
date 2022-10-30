@@ -1,4 +1,25 @@
-# Getting Started with Create React App
+# BookshelfApp
+site is live
+## About the Bookshelf App"
+In the bookshelves app, you can see different types of books like novels, fiction and non-fiction, study related, and many more. Here, the client can access only limited books available in the bookshelves app. if the client wants to know about the book. I have provided a brief description of the specific book. They can also check the book ratings.
+
+## Technologies that i have used:
+React,  JSX, HTML, CSS, JavaScript 
+
+# Instalastions are:
+For the **Bookshelf App** some packages that may need to be install:
+npx create-react-app
+react-dom
+bootstrap for CSS
+## Routes
+Routes are avaliable as bookshelf
+
+
+
+
+
+
+ # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

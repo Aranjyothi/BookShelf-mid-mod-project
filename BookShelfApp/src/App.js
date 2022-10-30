@@ -26,7 +26,6 @@ return false
  }
  function addMoreToFavorites(item){
   setFavorite([...favorite,item])
-  console.log(item)
  }
 //  const addMoreToFavorites = (more,id) =>{
 //   console.log(more.id)

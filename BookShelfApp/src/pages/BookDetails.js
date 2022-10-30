@@ -1,27 +1,26 @@
 import React from 'react'
 import {useEffect,useState} from 'react'
-import {useParams,useNavigate} from 'react-router-dom'
+import {useParams,useNavigate, Link} from 'react-router-dom'
 import NotesForm from '../components/NotesForm'
-function BookDetails({favorites,addMoreToFavorites}) {
+function BookDetails({favorites,addMoreToFavorite,item}) {
     let params = useParams()
     let navigate = useNavigate()
 
-    let[bookdetails,setBookdetails] = useState({})
+    let[ bookdetails, setBookdetails] = useState({})
     useEffect(()=>{
-        const book = favorites.filter((b) => params.id === b.itemId)
-        if(book.length){
-            setBookdetails(book)
-            console.log(book)
-        } else{
-            navigate('/')
-        }
+        // const book = favorites.filter((b) => params.id === b.item)
+        // if(book.length){
+        //     setBookdetails(book[0])
+        // } else{
+        //     navigate('/')
+        // }
     }, [favorites])
 
   return (
     <div>
         <h2>BookDetails</h2>
         <h3>{bookdetails.title}</h3>
-       <img src={bookdetails.imgUrl} alt={bookdetails.title}/>
+      <img src={bookdetails.imgUrl} alt={bookdetails.title}/>
         <p>Author:{bookdetails.author}</p>
         <p>Rating:{bookdetails.rating}</p>
         <br /><br />
@@ -38,7 +37,7 @@ function BookDetails({favorites,addMoreToFavorites}) {
 
 
         <NotesForm
-        addMoreToFavorites={addMoreToFavorites}
+        addMoreToFavorites={addMoreToFavorite}
         itemId={bookdetails.itemId}
         />
 }

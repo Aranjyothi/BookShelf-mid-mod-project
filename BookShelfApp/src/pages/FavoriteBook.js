@@ -49,9 +49,9 @@ function FavoriteBook({item,favorite,addToFavorites,removeFromFavorites}) {
           <br></br>
           Review:{item.review} <br /> 
           Description:{item.description} 
-          {/* removeFromFavorites={removeFromFavorites} */}
+       
           <br></br>
-          {/* <button onClick={() => removeFromFavorites(item)}>Remove from Favorite</button><br /><br /> */}
+        
          {loaded(item) }
          <br />
         </div>
