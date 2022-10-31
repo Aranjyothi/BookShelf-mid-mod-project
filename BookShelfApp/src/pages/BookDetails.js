@@ -1,19 +1,20 @@
 import React from 'react'
 import {useEffect,useState} from 'react'
-import {useParams,useNavigate, Link} from 'react-router-dom'
+import {useParams,useNavigate} from 'react-router-dom'
 import NotesForm from '../components/NotesForm'
-function BookDetails({favorites,addMoreToFavorite,item}) {
+function BookDetails({favorites,addMoreToFavorite}) {
     let params = useParams()
     let navigate = useNavigate()
 
     let[ bookdetails, setBookdetails] = useState({})
     useEffect(()=>{
-        // const book = favorites.filter((b) => params.id === b.item)
-        // if(book.length){
-        //     setBookdetails(book[0])
-        // } else{
-        //     navigate('/')
-        // }
+        const book = favorites.filter((b) => params.id === b.itemid)
+        console.log(book)
+        if(book.length){
+            setBookdetails(book[0])
+        } else{
+            navigate('/')
+        }
     }, [favorites])
 
   return (
@@ -38,7 +39,7 @@ function BookDetails({favorites,addMoreToFavorite,item}) {
 
         <NotesForm
         addMoreToFavorites={addMoreToFavorite}
-        itemId={bookdetails.itemId}
+        favorites={favorites}
         />
 }
 

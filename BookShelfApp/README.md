@@ -13,12 +13,86 @@ react-dom
 bootstrap for CSS
 ## Routes
 Routes are avaliable as bookshelf
+**/Home**
+**/favorite**
+**/About**
+## Challenges are:
+During my Project I face so technical challenges. My main challengers are how to render the page and data.
+## Code:
+function BookDetails({favorites,addMoreToFavorite}) {
+    let params = useParams()
+    let navigate = useNavigate()
+
+    let[ bookdetails, setBookdetails] = useState({})
+    useEffect(()=>{
+        const book = favorites.filter((b) => params.id === b.itemid)
+        console.log(book)
+        if(book.length){
+            setBookdetails(book[0])
+        } else{
+            navigate('/')
+        }
+    }, [favorites])
+
+## Future Implimentations:
+* Need to create login page.
+* Adding more details about my **BookShelfApp** for the customer.
+* Need to Provide more virtual book access.
 
 
 
 
 
-
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
  # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
