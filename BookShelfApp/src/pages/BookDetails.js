@@ -7,7 +7,7 @@ function BookDetails({ favorite, addMoreToFavorite }) {
   const bookdetail = favorite[params.id];
   console.log(bookdetail);
    return (
-    <div>
+    <div className="book">
       <h2>BookDetails</h2>
       <h3>{bookdetail.title}</h3>
       <img className="detail-image" src={bookdetail.imgUrl} alt={bookdetail.title} />
@@ -17,7 +17,7 @@ function BookDetails({ favorite, addMoreToFavorite }) {
       <br />
       <br />
       {bookdetail.NotesForm ? (
-        <div>
+        <div className="note">
           <h4>Thoughts:</h4>
           <p>Personal Ratings:{bookdetail.rating}</p>
           <p> Notes:{bookdetail.notes}</p>
